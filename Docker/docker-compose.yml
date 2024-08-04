@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:latest
+    container_name: GoShop
+    environment:
+      POSTGRES_USER: goshop
+      POSTGRES_PASSWORD: goshop
+      POSTGRES_DB: go_shop
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:
